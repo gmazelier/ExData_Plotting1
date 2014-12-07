@@ -9,8 +9,7 @@ data <- getData()
 
 png("plot3.png", width = 480, height = 480)
 with(
-    data,
-    {
+    data, {
         plot(
             y = Sub_metering_1,
             x = DateTime,
@@ -28,13 +27,12 @@ with(
             x = DateTime,
             col = 'Blue'
         )
-    }
-)
-legend(
-    x = "topright",
-    legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-    col = c("Black", "Red", "Blue"),
-    lwd = 1
+        legend(
+            x = "topright",
+            legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
+            col = c("Black", "Red", "Blue"),
+            lwd = 1
+        )}
 )
 dev.off()
 
